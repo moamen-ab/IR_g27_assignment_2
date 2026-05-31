@@ -1,0 +1,7 @@
+# Request: empty — the server knows which tag IDs to look for
+---
+# Response
+geometry_msgs/PoseStamped cube1_pose   # tag ID 1  (red cube)  in world frame
+geometry_msgs/PoseStamped cube2_pose   # tag ID 10 (blue cube) in world frame
+bool success
+string message
