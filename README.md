@@ -14,7 +14,7 @@ fixed RGB camera, plans pick-and-place motions using **MoveIt Task Constructor
 |------|---------|
 | ROS2 | Jazzy |
 | Gazebo | Harmonic (gz-sim 8) |
-| MoveIt2 | main |
+| MoveIt2 | Main |
 | OS | Ubuntu 24.04 |
 
 ---
