@@ -40,6 +40,7 @@ Build the workspace:
 
 ```bash
 cd ~/your_ws
+sudo apt install python3-colcon-mixin
 colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
 colcon mixin update default
 colcon build --mixin release
@@ -67,6 +68,7 @@ Then build and source as normal:
 
 ```bash
 cd ~/your_ws
+sudo apt install python3-colcon-mixin
 colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
 colcon mixin update default
 colcon build --mixin release
