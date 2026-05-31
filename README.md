@@ -14,7 +14,7 @@ fixed RGB camera, plans pick-and-place motions using **MoveIt Task Constructor
 |------|---------|
 | ROS2 | Jazzy |
 | Gazebo | Harmonic (gz-sim 8) |
-| MoveIt2 | Jazzy |
+| MoveIt2 | main |
 | OS | Ubuntu 24.04 |
 
 ---
@@ -40,6 +40,8 @@ Build the workspace:
 
 ```bash
 cd ~/your_ws
+colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+colcon mixin update default
 colcon build --mixin release
 source install/setup.bash
 ```
