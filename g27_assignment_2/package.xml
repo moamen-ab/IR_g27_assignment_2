@@ -18,6 +18,9 @@
   <depend>tf2_eigen</depend>
   <depend>moveit_ros_planning_interface</depend>
   <depend>moveit_task_constructor_core</depend>
+  <depend>apriltag_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>sensor_msgs</depend>
 
   <member_of_group>rosidl_interface_packages</member_of_group>
   <exec_depend>rosidl_default_runtime</exec_depend>

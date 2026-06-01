@@ -19,6 +19,11 @@ find_package(moveit_ros_planning_interface REQUIRED)
 find_package(moveit_task_constructor_core REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(apriltag_msgs REQUIRED)
+
 # -------------------------------------------------------------------------
 # Generate custom service
 # -------------------------------------------------------------------------
@@ -75,11 +80,32 @@ target_link_libraries(cube_swap_node
 )
 
 # -------------------------------------------------------------------------
+# cube_color_detector
+# -------------------------------------------------------------------------
+add_executable(cube_color_detector
+  src/cube_color_detector.cpp
+)
+target_include_directories(cube_color_detector PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
+ament_target_dependencies(cube_color_detector
+  rclcpp
+  sensor_msgs
+  std_msgs
+  cv_bridge
+  apriltag_msgs
+)
+target_link_libraries(cube_color_detector
+  ${OpenCV_LIBS}
+)
+# -------------------------------------------------------------------------
 # Install
 # -------------------------------------------------------------------------
 install(TARGETS
   pose_estimator_node
   cube_swap_node
+  cube_color_detector
   DESTINATION lib/${PROJECT_NAME}
 )
 
