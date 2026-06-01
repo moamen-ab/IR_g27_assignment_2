@@ -112,8 +112,13 @@ source install/setup.bash
 
 ---
 
-## Launching the Project
+## Launching the main Project
 
 ```bash
 ros2 launch g27_assignment_2 main.launch.py
+```
+## Launching the color detector
+
+```bash
+ros2 launch g27_assignment_2 color.launch.py
 ```
