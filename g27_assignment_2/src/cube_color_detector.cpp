@@ -69,7 +69,7 @@ private:
       int sample_x = std::clamp(cx - 10, 5, image.cols - 6);
       int sample_y = std::clamp(cy + 20, 5, image.rows - 6);
 
-      // Sample a small 5x5 region around the center for robustness
+      // Sample a small 6x6 region around the center for robustness
       cv::Rect roi(sample_x - 3, sample_y - 3, 6, 6);
       cv::Mat patch = hsv(roi);
       cv::Scalar mean_hsv = cv::mean(patch);
