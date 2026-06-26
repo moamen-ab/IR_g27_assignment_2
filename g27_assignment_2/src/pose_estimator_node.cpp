@@ -69,28 +69,7 @@ void PoseEstimatorNode::getCubePosesCallback(
 
     response->cube1_pose  = pose_cube1;
     response->cube2_pose  = pose_cube2;
-  /*
-  // ----------------------------------------------------------------
-  // TEMPORARY: override with known Gazebo ground-truth positions to
-  // validate the MTC pipeline. Switch back to pose_cube1/pose_cube2
-  // once MTC pick-and-place is confirmed working.
-  //
-  // Ground truth from Gazebo inspector:
-  //   cube1 (tag 1,  red):  x=4.0,  y=-1.1, z=0.38
-  //   cube2 (tag 10, blue): x=4.6,  y=-0.5, z=0.38
-  // ----------------------------------------------------------------
-  response->cube1_pose.header.frame_id    = WORLD_FRAME;
-  response->cube1_pose.pose.position.x    = 4.0;
-  response->cube1_pose.pose.position.y    = -1.1;
-  response->cube1_pose.pose.position.z    = 0.378;
-  response->cube1_pose.pose.orientation.w = 1.0;
-
-  response->cube2_pose.header.frame_id    = WORLD_FRAME;
-  response->cube2_pose.pose.position.x    = 4.6;
-  response->cube2_pose.pose.position.y    = -0.5;
-  response->cube2_pose.pose.position.z    = 0.378;
-  response->cube2_pose.pose.orientation.w = 1.0;
-  */
+  
   response->success = true;
   response->message = "Both cube poses returned.";
   
